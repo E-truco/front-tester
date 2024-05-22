@@ -38,6 +38,8 @@ class _MyAppState extends State<MyApp> {
     socket.on('message', (data) {
       _streamController.add(data);
     });
+
+    socket.emit('joinRoom',['victor', 'testes']);
   }
 
   @override
